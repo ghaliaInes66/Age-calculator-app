@@ -30,12 +30,13 @@ body{
   width: 100vw;
   height: 100vh;
   font-family: var(--font-family);
+  display: grid;
+  place-items: center;
 }
 
 .container{
   width: 600px;
   background-color: var(--White);
-  margin: 100px auto 0 auto;
   border-radius: 15px 15px 100px 15px;
   position: relative;
   padding: 20px;
