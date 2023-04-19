@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  /*color*/
+--Purple: hsl(259, 100%, 65%);
+--Light-red: hsl(0, 100%, 67%);
+
+--White: hsl(0, 0%, 100%);
+--Off-white: hsl(0, 0%, 94%);
+--Light-grey: hsl(0, 0%, 86%);
+--Smokey-grey: hsl(0, 1%, 44%);
+--Off-black: hsl(0, 0%, 8%);
+
+/*font*/
+--Font-size-inputs: 32px;
+--font-family: 'Poppins', sans-serif;
+--font-Weight:400;
+--font-Weight-input:700;
+--font-Weight-ou:800;
+}
+
+body{
+  background-color: var(--Off-white);
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--font-family);
+}
+
+.container{
+  width: 600px;
+  background-color: var(--White);
+  margin: 100px auto 0 auto;
+  border-radius: 15px 15px 100px 15px;
+  position: relative;
+  padding: 20px;
+}
+
+[data-name="form"]{
+  display: grid;
+  grid-template-columns: repeat(3,150px);
+  padding: 20px;
+  color: var(--Smokey-grey);
+  font-size: 10px;
+}
+
+input{
+  font-size: 18px;
+  font-weight: var(--font-Weight-input);
+  width: 110px;
+  height: 40px;
+  border:1px solid var(--Light-grey);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+input:hover{
+  border-color: var(--Purple);
+}
+#btn{
+  position: absolute;
+  left: 500px;
+  transform: translate(0 ,-115%);
+  background-color: var(--Purple);
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  display: grid;
+  place-items: center;
+  transition: all 0.15s;
+}
+#btn>img{
+  width: 60%;
+}
+#btn:hover{
+  background-color: var(--Off-black);
+}
+
+hr{
+  margin:20px 20px 30px ;
+  width: 85%;
+}
+
+.output{
+  color: var(--Purple);
+  letter-spacing: 8px;
+}
+
+p{
+  font-weight: var(--font-Weight-ou);
+  font-style: italic;
+  font-size: 50px;
+  padding: 0 20px ;
+}
+
+.error{
+  font-style: italic;
+  font-weight: var(--font-Weight);
+  color: var(--Light-red);
+  font-size: 12px;
+}
+
+
+@media (max-width:550px) {
+  .container{
+    width: 90%;
+  }
+
+  #btn{
+    left: 50%;
+    transform: translate(-50%,-115%);
+  }
+
+  input{
+    width: 80px;
+    padding: 10px;
+  }
+  [data-name="form"]{
+    grid-template-columns: repeat(3,90px);
+  }
+  .output{
+    letter-spacing: 0;
+  }
+  p{
+    font-size: 40px;
+  }
+}
