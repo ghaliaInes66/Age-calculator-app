@@ -22,6 +22,9 @@ function errorEmpty(){
     day.style.borderColor='red';
     month.style.borderColor='red';
     year.style.borderColor='red';
+    outputdays.textContent="--";
+  outputmonths.textContent="--";
+  outputyears.textContent="--";
 }
 
 function errorInvalid(){
@@ -34,12 +37,18 @@ function errorInvalid(){
   day.style.borderColor='red';
   month.style.borderColor='red';
   year.style.borderColor='red';
+  outputdays.textContent="--";
+  outputmonths.textContent="--";
+  outputyears.textContent="--";
 }
 
 function errorWholeform(){
     error1.textContent="Must be a valid date";
     red1.style.color='red';
     day.style.borderColor='red';
+    outputdays.textContent="--";
+  outputmonths.textContent="--";
+  outputyears.textContent="--";
 }
 
 function startCase(){
