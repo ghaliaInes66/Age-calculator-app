@@ -77,7 +77,7 @@ let currentday = new Date().toJSON().slice(8, 10);
   return;
   }
 
-  if(day.value>31||month.value>12||year.value>currentyear){
+  if(day.value>31||day.value<1||month.value>12||month.value<1||year.value>currentyear||year.value<1){
   errorInvalid();
    return;
   }
